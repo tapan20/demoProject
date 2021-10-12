@@ -20,6 +20,7 @@ public class demo extends ExtentReportTest {
 
 	String webURL = "https://www.naukri.com/";
 	String filePath = "/Users/tapan.khimani/Desktop/sample.pdf";
+	String downloadSampleResume = "https://resume.naukri.com/sample-resume-for-it-information-technology";
 
 	public void uploadFile() throws Exception {
 
@@ -40,6 +41,55 @@ public class demo extends ExtentReportTest {
 		Thread.sleep(3000);
 
 		testStep("PASS", "File Uploaded Successfully");
+
+	}
+
+	public void downloadSampleResume() throws Exception {
+		Thread.sleep(1500);
+
+		driver.navigate().to(downloadSampleResume);
+		Thread.sleep(1500);
+
+		WebElement downloadBtn = driver
+				.findElement(By.cssSelector("a[class='fr mb10 sampleDwndLink'] span[class='font_medium fl']"));
+		Thread.sleep(1500);
+		downloadBtn.click();
+		Thread.sleep(1500);
+
+		WebElement emailId = driver.findElement(By.cssSelector("#bd_email"));
+		Thread.sleep(1500);
+		emailId.click();
+		emailId.sendKeys("test@mailiantor.com");
+		Thread.sleep(1500);
+
+		WebElement contactNb = driver.findElement(By.cssSelector("#bd_mobile"));
+		Thread.sleep(1500);
+		contactNb.click();
+		contactNb.sendKeys("9409664787");
+		Thread.sleep(1500);
+
+		WebElement years = driver.findElement(By.cssSelector("#bd_adv_workExp_year"));
+		Thread.sleep(1500);
+		years.click();
+		Thread.sleep(1500);
+
+		WebElement yearsOptn = driver.findElement(By.cssSelector("div[id='dd_bd_adv_workExp_year'] li[id=' 1']"));
+		Thread.sleep(1500);
+		yearsOptn.click();
+		Thread.sleep(1500);
+
+		WebElement submit = driver.findElement(By.cssSelector("div[class='rowR'] button[value='Login']"));
+		Thread.sleep(1500);
+		submit.click();
+		Thread.sleep(1500);
+
+		WebElement skip = driver.findElement(By
+				.cssSelector("#shortRegistration > div.ltCntnt > form > section.secndScr.dspN > div.row.disclmr > a"));
+		Thread.sleep(1500);
+		skip.click();
+		Thread.sleep(1500);
+
+		testStep("PASS", "Successfully Downloaded Sample Resume");
 
 	}
 

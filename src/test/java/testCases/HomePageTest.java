@@ -25,9 +25,19 @@ public class HomePageTest extends ExtentReportTest {
 	}
 
 	@Test(priority = 2)
+	public void downloadSampleResume() throws Exception {
+		MyScreenRecorder.startRecording("TC2");
+
+		uploadObject.downloadSampleResume();
+		Thread.sleep(1500);
+		MyScreenRecorder.stopRecording();
+
+	}
+
+	@Test(priority = 3)
 	public void handleFrames() throws Exception {
 
-		MyScreenRecorder.startRecording("TC2");
+		MyScreenRecorder.startRecording("TC3");
 
 		uploadObject.windowHandles();
 		Thread.sleep(1500);
