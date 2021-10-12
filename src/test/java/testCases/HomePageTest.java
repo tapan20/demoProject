@@ -2,13 +2,13 @@ package testCases;
 
 import org.testng.annotations.Test;
 import base.ExtentReportTest;
-import pages.eazDinePOS_browser;
+import pages.demo;
 import util.MyScreenRecorder;
 import util.testUtil;
 
 public class HomePageTest extends ExtentReportTest {
 
-	eazDinePOS_browser uploadObject = new eazDinePOS_browser();
+	demo uploadObject = new demo();
 	testUtil util = new testUtil();
 	ExtentReportTest extentReports = new ExtentReportTest();
 

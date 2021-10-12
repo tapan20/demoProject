@@ -16,7 +16,7 @@ import org.openqa.selenium.WebElement;
 
 import base.ExtentReportTest;
 
-public class eazDinePOS_browser extends ExtentReportTest {
+public class demo extends ExtentReportTest {
 
 	String webURL = "https://www.naukri.com/";
 	String filePath = "/Users/tapan.khimani/Desktop/sample.pdf";
